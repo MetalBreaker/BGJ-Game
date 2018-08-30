@@ -159,6 +159,48 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fc437cf6c45d6a45bea2a14cfffb7ae, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1001 &244657237
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4121924188782886, guid: dd628e724b9f7e14e8a0577c3822e34d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121924188782886, guid: dd628e724b9f7e14e8a0577c3822e34d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121924188782886, guid: dd628e724b9f7e14e8a0577c3822e34d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121924188782886, guid: dd628e724b9f7e14e8a0577c3822e34d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121924188782886, guid: dd628e724b9f7e14e8a0577c3822e34d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121924188782886, guid: dd628e724b9f7e14e8a0577c3822e34d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121924188782886, guid: dd628e724b9f7e14e8a0577c3822e34d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121924188782886, guid: dd628e724b9f7e14e8a0577c3822e34d, type: 2}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dd628e724b9f7e14e8a0577c3822e34d, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!4 &347151579 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4555700294878856, guid: 7fc437cf6c45d6a45bea2a14cfffb7ae,
