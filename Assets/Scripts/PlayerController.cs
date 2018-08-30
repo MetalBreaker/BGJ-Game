@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿#pragma warning disable 618
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
