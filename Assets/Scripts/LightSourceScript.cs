@@ -32,7 +32,7 @@ public class LightSourceScript : MonoBehaviour
 		{
 			if (PortalScript.dict[_go] != null)
 			{
-				PortalScript.dict[_go].transform.localPosition = _hit2d.transform.InverseTransformPoint(_hit2d.point)/* + (PortalScript.dict[_go].transform.InverseTransformDirection(PortalScript.dict[_go].transform.parent.up) * PortalScript._offset)*/;
+				PortalScript.dict[_go].transform.localPosition = _hit2d.transform.InverseTransformPoint(_hit2d.point);
 			}
 		}
 		positions[0] = transform.position;
