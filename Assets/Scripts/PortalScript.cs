@@ -12,6 +12,8 @@ public class PortalScript : MonoBehaviour
 
 	static readonly Vector3 _rotOffset = new Vector3(0f, 0f, 180f);
 
+	static readonly Vector3 _oob = new Vector3(999f, 999f, 999f);
+
 	public static Dictionary<GameObject, GameObject> dict = new Dictionary<GameObject, GameObject>();
 
 	void OnTriggerStay2D(Collider2D _col2d)
@@ -36,12 +38,22 @@ public class PortalScript : MonoBehaviour
 
 	void OnTriggerExit2D(Collider2D _col2d)
 	{
+		StartCoroutine(PloxDestroy(_col2d));
+	}
+
+	IEnumerator PloxDestroy(Collider2D _col2d)
+	{
 		if (_otherPortal != null)
 		{
 			if (dict.ContainsKey(_col2d.gameObject))
 			{
-				GameObject.Destroy(dict[_col2d.gameObject]);
-				dict.Remove(_col2d.gameObject);
+				GameObject obj = _col2d.gameObject;
+				dict[obj].GetComponent<LineRenderer>().enabled = false;
+				dict[obj].GetComponent<LightSourceScript>().enabled = false;
+				dict[obj].transform.position = _oob;
+				yield return null;
+				GameObject.Destroy(dict[obj]);
+				dict.Remove(obj);
 			}
 		}
 	}

@@ -14,7 +14,7 @@ public class MoveLightTrigger : MonoBehaviour
     [SerializeField]
     float speed = 9.5f;
 
-    int numLights = 0;
+    public int numLights = 0;
 
     void OnTriggerEnter2D()
     {
