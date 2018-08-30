@@ -30,6 +30,10 @@ After placing them, configure the objects that should be influenced by them, as 
 Place them anywhere and rotate them however you want. When you fire up the game, they will shine light forwards.
 The player's goal is to get that light to an end goal using portals. (Not implemented yet, pending)
 
+### Win detectors
+You can place a win detector anywhere in the scene.
+If light illuminates it, the player wins the level.
+
 ### Portals
 Portals will be spawned by code. Do **NOT** spawn them in manually.
 
