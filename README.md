@@ -32,3 +32,9 @@ The player's goal is to get that light to an end goal using portals. (Not implem
 
 ### Portals
 Portals will be spawned by code. Do **NOT** spawn them in manually.
+
+
+## Controls
+WASD/Arrow keys to move around.
+Left/right click to spawn portals.
+To use levers, hover over them and press E.
