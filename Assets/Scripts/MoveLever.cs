@@ -14,7 +14,7 @@ public class MoveLever : MonoBehaviour
     bool state = false;
 
     [SerializeField]
-    float speed = 9.5f;
+    float speed = 3f;
 
     void OnMouseOver()
     {

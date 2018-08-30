@@ -12,7 +12,7 @@ public class MoveLightTrigger : MonoBehaviour
     Vector2 _onPosChange;
 
     [SerializeField]
-    float speed = 9.5f;
+    float speed = 3f;
 
     public int numLights = 0;
 
