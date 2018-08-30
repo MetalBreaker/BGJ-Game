@@ -35,6 +35,7 @@ public class PortalScript : MonoBehaviour
 			{
 				dict[colObj].GetComponent<LineRenderer>().enabled = true;
 				dict[colObj].GetComponent<LightSourceScript>().enabled = true;
+				dict[colObj].transform.localPosition = Vector3.zero;
 			}
 			dict[colObj].transform.localScale = _scale;
 			dict[colObj].transform.localRotation = Quaternion.Inverse(Quaternion.Euler(transform.eulerAngles - _rotOffset)) * _col2d.transform.rotation;
@@ -56,7 +57,7 @@ public class PortalScript : MonoBehaviour
 				dict[obj].GetComponent<LineRenderer>().enabled = false;
 				dict[obj].GetComponent<LightSourceScript>().enabled = false;
 				dict[obj].transform.position = _oob;
-				yield return null;
+				yield return new WaitForFixedUpdate();
 				GameObject.Destroy(dict[obj]);
 				dict.Remove(obj);
 			}

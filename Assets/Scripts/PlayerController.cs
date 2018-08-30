@@ -29,7 +29,6 @@ public class PlayerController : MonoBehaviour
     [ColorUsage(true, true)] public Color _portal2Col;
 
     Vector3 _portalSpawnPos;
-    Vector3 _portalSpawnNormal;
 
     GameObject[] portals = new GameObject[2];
 
@@ -78,7 +77,6 @@ public class PlayerController : MonoBehaviour
                 yield break;
             positions[1] = hit.point;
             _portalSpawnPos = hit.point;
-            _portalSpawnNormal = hit.normal;
         }
         else
             yield break;
