@@ -93,6 +93,9 @@ public class PlayerController : MonoBehaviour
         rend.SetPositions(positions);
         portals[portal] = GameObject.Instantiate(_portal, _portalSpawnPos, Quaternion.identity) as GameObject;
         portals[portal].transform.up = hit.normal;
+        portals[portal].GetComponent<FollowParent>().parent = hit.transform;
+        portals[portal].GetComponent<FollowParent>().localPos = hit.transform.InverseTransformPoint(portals[portal].transform.position);
+        portals[portal].GetComponent<FollowParent>().localRot = Quaternion.Inverse(hit.transform.rotation) * portals[portal].transform.rotation;
         if (portal == 0)
         {
             if (portals[1] != null)
