@@ -31,6 +31,11 @@ public class PortalScript : MonoBehaviour
 				GameObject obj = GameObject.Instantiate(colObj, _otherPortal.transform.position, Quaternion.identity, _otherPortal.transform) as GameObject;
 				dict[colObj] = obj;
 			}
+			else if (dict[colObj].GetComponent<LineRenderer>().enabled == false || dict[colObj].GetComponent<LightSourceScript>().enabled == false)
+			{
+				dict[colObj].GetComponent<LineRenderer>().enabled = true;
+				dict[colObj].GetComponent<LightSourceScript>().enabled = true;
+			}
 			dict[colObj].transform.localScale = _scale;
 			dict[colObj].transform.localRotation = Quaternion.Inverse(Quaternion.Euler(transform.eulerAngles - _rotOffset)) * _col2d.transform.rotation;
 		}
