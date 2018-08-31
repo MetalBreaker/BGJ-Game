@@ -22,7 +22,7 @@ public class ToggleLightTrigger : MonoBehaviour
     {
         if (reqColor != Color.white)
         {
-            if (_col2d.gameObject.GetComponent<LineRenderer>().material.color != reqColor * LightSourceScript._col)
+            if (_col2d.gameObject.GetComponent<LightSourceScript>()._lightColor != reqColor)
                 return;
         }
         numLights++;
@@ -32,7 +32,7 @@ public class ToggleLightTrigger : MonoBehaviour
     {
         if (reqColor != Color.white)
         {
-            if (_col2d.gameObject.GetComponent<LineRenderer>().material.color != reqColor * LightSourceScript._col)
+            if (_col2d.gameObject.GetComponent<LightSourceScript>()._lightColor != reqColor)
                 return;
         }
         numLights--;
