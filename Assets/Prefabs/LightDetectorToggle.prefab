@@ -9,33 +9,33 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1390370142853186}
+  m_RootGameObject: {fileID: 1452876555985586}
   m_IsPrefabAsset: 1
---- !u!1 &1390370142853186
+--- !u!1 &1452876555985586
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4543544253495312}
-  - component: {fileID: 212431855683739556}
-  - component: {fileID: 114187852212150136}
-  - component: {fileID: 61614751849656626}
-  - component: {fileID: 50479147286059206}
+  - component: {fileID: 4044341530123136}
+  - component: {fileID: 212103686552071456}
+  - component: {fileID: 61125979959597712}
+  - component: {fileID: 50164619526869278}
+  - component: {fileID: 114133959847068708}
   m_Layer: 16
-  m_Name: LightDetectorMove
+  m_Name: LightDetectorToggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4543544253495312
+--- !u!4 &4044341530123136
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1390370142853186}
+  m_GameObject: {fileID: 1452876555985586}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.74, y: 1.25, z: 0}
   m_LocalScale: {x: 15, y: 45, z: 1}
@@ -43,13 +43,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50479147286059206
+--- !u!50 &50164619526869278
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1390370142853186}
+  m_GameObject: {fileID: 1452876555985586}
   m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -63,12 +63,12 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61614751849656626
+--- !u!61 &61125979959597712
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1390370142853186}
+  m_GameObject: {fileID: 1452876555985586}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -88,29 +88,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.01, y: 0.01}
   m_EdgeRadius: 0
---- !u!114 &114187852212150136
+--- !u!114 &114133959847068708
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1390370142853186}
+  m_GameObject: {fileID: 1452876555985586}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb84da321dd9c9944a7d689d53f1430f, type: 3}
+  m_Script: {fileID: 11500000, guid: 1774345412a076142846b4d2c3929c51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _obj: {fileID: 0}
-  _restingPos: {x: 0, y: 0}
-  _onPosChange: {x: 0, y: 0}
-  speed: 3
-  numLights: 0
   reqColor: {r: 1, g: 1, b: 1, a: 1}
---- !u!212 &212431855683739556
+  startState: 0
+--- !u!212 &212103686552071456
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1390370142853186}
+  m_GameObject: {fileID: 1452876555985586}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0

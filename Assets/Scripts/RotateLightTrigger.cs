@@ -15,20 +15,40 @@ public class RotateLightTrigger : MonoBehaviour
 
     Quaternion _quatRot;
 
+    public Color reqColor = Color.white;
+
     int numLights = 0;
 
     [SerializeField]
     float speed = 55f;
 
-    void OnTriggerEnter2D()
+    void Start()
     {
+        if (reqColor != Color.white)
+        {
+            GetComponent<SpriteRenderer>().color = reqColor;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D _col2d)
+    {
+        if (reqColor != Color.white)
+        {
+            if (_col2d.gameObject.GetComponent<LineRenderer>().material.color != reqColor * LightSourceScript._col)
+                return;
+        }
         numLights++;
         _quatRestingRot = Quaternion.Euler(_restingRot);
         _quatRot = Quaternion.Euler(_onRot);
     }
 
-    void OnTriggerExit2D()
+    void OnTriggerExit2D(Collider2D _col2d)
     {
+        if (reqColor != Color.white)
+        {
+            if (_col2d.gameObject.GetComponent<LineRenderer>().material.color != reqColor * LightSourceScript._col)
+                return;
+        }
         numLights--;
         _quatRestingRot = Quaternion.Euler(_restingRot);
         _quatRot = Quaternion.Euler(_onRot);

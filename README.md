@@ -19,16 +19,19 @@ and in the inspector, scroll down and you should see "Moving Platform Script". C
 the X and Y values for that is up to you.
 
 ### Light detectors and levers
-There are two types of light detectors and levers; moving ones and rotating ones.
+There are three types of light detectors and levers; moving ones, rotating ones and toggling ones.
+Colored light detectors will only react to light of their own color. 
+White light detectors detect any color of light.
 
 To activate a lever, hover over it and press E.
 To activate a light detector, light must be shone over it.
 
-After placing them, configure the objects that should be influenced by them, as well as the desired rotation/position values.
+After placing them, configure the objects that should be influenced by them, as well as the desired rotation/position values or state in which the light should be when the switch is off in case you are using a toggle.
 
 ### Light sources
 Place them anywhere and rotate them however you want. When you fire up the game, they will shine light forwards.
-The player's goal is to get that light to an end goal using portals. (Not implemented yet, pending)
+You can set their color in the inspector.
+The player's goal is to get that light to an end goal using portals.
 
 ### Win detectors
 You can place a win detector anywhere in the scene.

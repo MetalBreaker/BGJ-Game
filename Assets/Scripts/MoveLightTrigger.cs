@@ -14,15 +14,35 @@ public class MoveLightTrigger : MonoBehaviour
     [SerializeField]
     float speed = 3f;
 
-    public int numLights = 0;
+    int numLights = 0;
 
-    void OnTriggerEnter2D()
+    public Color reqColor = Color.white;
+
+    void Start()
     {
+        if (reqColor != Color.white)
+        {
+            GetComponent<SpriteRenderer>().color = reqColor;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D _col2d)
+    {
+        if (reqColor != Color.white)
+        {
+            if (_col2d.gameObject.GetComponent<LineRenderer>().material.color != reqColor * LightSourceScript._col)
+                return;
+        }
         numLights++;
     }
 
-    void OnTriggerExit2D()
+    void OnTriggerExit2D(Collider2D _col2d)
     {
+        if (reqColor != Color.white)
+        {
+            if (_col2d.gameObject.GetComponent<LineRenderer>().material.color != reqColor * LightSourceScript._col)
+                return;
+        }
         numLights--;
     }
 

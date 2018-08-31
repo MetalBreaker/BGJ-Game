@@ -13,15 +13,17 @@ public class LightSourceScript : MonoBehaviour
 
 	RaycastHit2D _hit2d;
 
-	[ColorUsage(true, true)] public Color _col;
+	[ColorUsage(true, true)] public static Color _col = new Color(1.304f, 1.304f, 1.304f, 1f);
 
 	public BoxCollider2D bc2d;
+
+	public Color _lightColor = Color.white;
 
 	GameObject _go;
 
 	void Start()
 	{
-		_lineRend.material.SetColor("_Color", _col);
+		_lineRend.material.SetColor("_Color", _lightColor * _col);
 		_go = gameObject;
 	}
 

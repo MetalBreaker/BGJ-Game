@@ -12,7 +12,9 @@ public class PortalScript : MonoBehaviour
 
 	static readonly Vector3 _rotOffset = new Vector3(0f, 0f, 180f);
 
-	static readonly Vector3 _oob = new Vector3(999f, 999f, 999f);
+	internal static readonly Vector3 _oob = new Vector3(999f, 999f, 999f);
+
+	internal static readonly Vector3 _localLightPos = new Vector3(0f, 0.00548f, 0f);
 
 	public static Dictionary<GameObject, GameObject> dict = new Dictionary<GameObject, GameObject>();
 
