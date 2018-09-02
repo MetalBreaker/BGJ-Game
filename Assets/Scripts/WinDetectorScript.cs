@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WinDetectorScript : MonoBehaviour
 {
@@ -7,9 +8,15 @@ public class WinDetectorScript : MonoBehaviour
         WinGame();
     }
 
-    void WinGame()
+    public void WinGame()
     {
-        // Placeholder
-        Debug.Log("You've won the level.");
+        GameObject.Find("/GameComplete").GetComponent<GameComplete>().win.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void LoadNext()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
